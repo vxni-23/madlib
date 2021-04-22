@@ -14,7 +14,7 @@ Label(root, text = 'Click Any One :', font = 'freehand 15 bold').place(x=80, y=8
 
 def madlib1():
     r1=Tk()
-    r1.geometry('1080x1080')
+    r1.geometry('1080x720')
     r1.title('The Photographer')
 
     animals_=StringVar()
@@ -27,15 +27,14 @@ def madlib1():
     place_=StringVar()
 
     def submit():
-        animals=animals_.get()
-        profession=profession_.get()
-        cloth=cloth_.get()
-        verb=verb_.get()
-        food=food_.get()
-        things=thing_.get()
-        name=name_.get()
-        place=place_.get()
-        print(name)
+        animals=animals_entry.get()
+        profession=profession_entry.get()
+        cloth=cloth_entry.get()
+        verb=verb_entry.get()
+        food=food_entry.get()
+        things=thing_entry.get()
+        name=name_entry.get()
+        place=place_entry.get()
         out=Label(r1,text= 'Say' + food + ', the photographer said as the camera flashed! \n' + name + ' and I had gone to ' + place +' to get our photos taken today.\nThe first photo we really wanted was a picture of us dressed as ' + animals + ' pretending to be a ' + profession + '.\nWhen we saw the second photo, it was exactly what I wanted. We both looked like ' + things + ' wearing ' + cloth + ' and ' + verb + 'exactly what I had in mind',font=('calibre',10, 'italic'))
         out.grid(row=9,column=1)
         name_.set("")
