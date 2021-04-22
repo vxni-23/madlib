@@ -92,6 +92,98 @@ def madlib1():
     #r1.mainloop()
 
 def madlib2():
+    
+    r1 = Tk()
+    r1.geometry("1080x720")
+    r1.title("The Butterfly")
+
+    color_ = StringVar()
+    thing_ = StringVar()
+    place_ = StringVar()
+    person_ = StringVar()
+    adjective_ = StringVar()
+    insect_ = StringVar()
+    food_ = StringVar()
+    verb_ = StringVar()
+    adjective1_ = StringVar()
+
+    def submit():
+        color = color_entry.get()
+        thing = thing_entry.get()
+        place = place_entry.get()
+        person = person_entry.get()
+        adjective = adjective_entry.get()
+        insect = insect_entry.get()
+        food = food_entry.get()
+        verb = verb_entry.get()
+        adjective1 = adjective1_entry.get()
+
+        out = Label(r1, text = 'Last night I dreamed I was a ' +adjective+ ' butterfly with ' + color+ ' splotches that looked like '+thing+ ' .\nI flew to ' + place+ ' with my bestfriend and '+person+ ' who was a '+adjective1+ ' ' +insect +' .\nWe ate some ' +food+ ' when we got there and then decided to '+verb+ ' and the dream ended when I said-- lets ' +verb+ '.', font=('calibre',10, 'italic'))
+        out.grid(row = 9, column = 1)
+
+    adjective_label = Label(r1, text = 'Adjective', font = ('calibre',10, 'bold'))
+    adjective_entry = Entry(r1, textvariable = adjective_, font = ('calibre',10,'normal'))
+
+    color_label = Label(r1, text = 'Color Name', font = ('calibre',10, 'bold'))
+    color_entry = Entry(r1, textvariable = color_, font = ('calibre',10,'normal'))
+
+    thing_label = Label(r1, text = 'Thing Name', font = ('calibre',10, 'bold'))
+    thing_entry = Entry(r1, textvariable = thing_, font = ('calibre',10,'normal'))
+
+    place_label = Label(r1, text = 'Place Name', font = ('calibre',10, 'bold'))
+    place_entry = Entry(r1, textvariable = place_, font = ('calibre',10,'normal'))
+
+    person_label = Label(r1, text = 'Person Name', font = ('calibre',10, 'bold'))
+    person_entry = Entry(r1, textvariable = person_, font = ('calibre',10,'normal'))
+
+    adjective1_label = Label(r1, text = 'Adjective', font = ('calibre',10, 'bold'))
+    adjective1_entry = Entry(r1, textvariable = adjective1_, font = ('calibre',10,'normal'))
+
+    insect_label = Label(r1, text = 'Insect Name', font = ('calibre',10, 'bold'))
+    insect_entry = Entry(r1, textvariable = insect_, font = ('calibre',10,'normal'))
+
+    food_label = Label(r1, text = 'Food Name', font = ('calibre',10, 'bold'))
+    food_entry = Entry(r1, textvariable = food_, font = ('calibre',10,'normal'))
+
+    verb_label = Label(r1, text = 'Verb', font = ('calibre',10, 'bold'))
+    verb_entry = Entry(r1, textvariable = verb_, font = ('calibre',10,'normal'))
+
+    sub_btn = Button(r1, text = 'Submit', command = submit)
+
+    adjective_label.grid(row = 0, column = 0)
+    adjective_entry.grid(row = 0, column = 2)
+
+    color_label.grid(row = 1, column = 0)
+    color_entry.grid(row = 1, column = 2)
+
+    thing_label.grid(row = 2, column = 0)
+    thing_entry.grid(row = 2, column = 2)
+
+    place_label.grid(row = 3, column = 0)
+    place_entry.grid(row = 3, column = 2)
+
+    person_label.grid(row = 4, column = 0)
+    person_entry.grid(row = 4, column = 2)
+
+    adjective1_label.grid(row = 5, column = 0)
+    adjective1_entry.grid(row = 5, column = 2)
+
+    insect_label.grid(row = 6, column = 0)
+    insect_entry.grid(row = 6, column = 2)
+
+    food_label.grid(row = 7, column = 0)
+    food_entry.grid(row = 7, column = 2)
+
+    verb_label.grid(row = 8, column = 0)
+    verb_entry.grid(row = 8, column = 2)
+
+    sub_btn.grid(row = 9, column = 2)
+
+
+
+
+
+
 
     adjactive = input('enter adjective : ')
     color = input('enter a color name : ')
@@ -108,19 +200,86 @@ def madlib2():
 
 
 def madlib3():
-    person = input('enter person name: ')
-    color = input('enter color : ')
-    foods = input('enter food name : ')
-    adjective = input('enter aa adjective name: ')
-    thing = input('enter a thing name : ')
-    place = input('enter place : ')
-    verb = input('enter verb : ')
-    adverb = input('enter adverb : ')
-    food = input('enter food name: ')
-    things = input('enter a thing name : ')
+
+    r1=Tk()
+    r1.geometry('1080x720')
+    r1.title('Apple and Apple')
+
+    thing_=StringVar()
+    food_=StringVar()
+    adverb_=StringVar()
+    verb_=StringVar()
+    place_=StringVar()
+    adjective_=StringVar()
+    color_=StringVar()
+    person_=StringVar()
 
 
-    print('Today we picked apple from '+person+ "'s Orchard. I had no idea there were so many different varieties of apples. I ate " +color+ ' apples straight off the tree that tested like '+foods+ '. Then there was a '+adjective+ ' apple that looked like a ' + thing + '.When our bag were full, we went on a free hay ride to '+place+ ' and back. It ended at a hay pile where we got to ' +verb+ ' ' +adverb+ '. I can hardly wait to get home and cook with the apples. We are going to make appple '+food+ ' and '+things+' pies!.')
+    def submit():
+        adverb=adverb_entry.get()
+        adjective=adjective_entry.get()
+        color=color_entry.get()
+        verb=verb_entry.get()
+        food=food_entry.get()
+        thing=thing_entry.get()
+        person=person_entry.get()
+        place=place_entry.get()
+        out=Label(r1,text='Today we picked apple from '+person+ "'s Orchard.\nI had no idea there were so many different varieties of apples.\nI ate " +color+ ' apples straight off the tree that tested like '+food+ '. Then there was a '+adjective+ ' apple that looked like a ' + thing + '.\nWhen our bag were full, we went on a free hay ride to '+place+ ' and back. It ended at a hay pile where we got to ' +verb+ ' ' +adverb+ '.\nI can hardly wait to get home and cook with the apples. We are going to make apple '+food+ ' and '+thing+' pies!.',font=('calibre',10, 'italic'))
+        out.grid(row=8,column=1)
+
+    verb_label = Label(r1, text = 'Verb in ing form', font=('calibre',10, 'bold'))
+    verb_entry = Entry(r1,textvariable =verb_, font=('calibre',10,'normal'))
+
+    food_label = Label(r1, text = 'Food Name', font=('calibre',10, 'bold'))
+    food_entry = Entry(r1,textvariable =food_, font=('calibre',10,'normal'))
+
+    adverb_label = Label(r1, text = 'Adverb', font=('calibre',10, 'bold'))
+    adverb_entry = Entry(r1,textvariable =adverb_, font=('calibre',10,'normal'))
+
+    thing_label = Label(r1, text = 'Thing', font=('calibre',10, 'bold'))
+    thing_entry = Entry(r1,textvariable =thing_, font=('calibre',10,'normal'))
+
+    place_label = Label(r1, text = 'Place', font=('calibre',10, 'bold'))
+    place_entry = Entry(r1,textvariable =place_, font=('calibre',10,'normal'))
+
+    adjective_label = Label(r1, text = 'Adjective', font=('calibre',10, 'bold'))
+    adjective_entry = Entry(r1,textvariable =adjective_, font=('calibre',10,'normal'))
+
+    color_label = Label(r1, text = 'Color', font=('calibre',10, 'bold'))
+    color_entry = Entry(r1,textvariable =color_, font=('calibre',10,'normal'))
+
+    person_label = Label(r1, text = 'Person', font=('calibre',10, 'bold'))
+    person_entry = Entry(r1,textvariable =person_, font=('calibre',10,'normal'))
+
+    sub_btn=Button(r1,text = 'Submit', command = submit)
+
+    adverb_label.grid(row=0,column=0)
+    adverb_entry.grid(row=0,column=2)
+
+    place_label.grid(row=1,column=0)
+    place_entry.grid(row=1,column=2)
+
+    thing_label.grid(row=2,column=0)
+    thing_entry.grid(row=2,column=2)
+
+    adjective_label.grid(row=3,column=0)
+    adjective_entry.grid(row=3,column=2)
+
+    color_label.grid(row=4,column=0)
+    color_entry.grid(row=4,column=2)
+
+    person_label.grid(row=5,column=0)
+    person_entry.grid(row=5,column=2)
+
+    food_label.grid(row=6,column=0)
+    food_entry.grid(row=6,column=2)
+
+    verb_label.grid(row=7,column=0)
+    verb_entry.grid(row=7,column=2)
+
+    sub_btn.grid(row=8,column=2)
+
+
 
 
 
